@@ -1,0 +1,32 @@
+<script setup lang="ts">
+
+import HeaderBlock from './components/HeaderBlock.vue';
+import BannerBlock from './components/BannerBlock.vue';
+
+</script>
+
+<template>
+  <header-block />
+  <banner-block :banner="$route.meta.banner" />
+  <router-view />
+</template>
+
+<style lang="scss">
+:root {
+  background-color: #f1efee;
+  color: #434343;
+
+  font-size: 24px;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+}
+
+</style>
