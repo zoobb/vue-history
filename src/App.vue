@@ -12,6 +12,10 @@ import BannerBlock from './components/BannerBlock.vue';
 </template>
 
 <style lang="scss">
+* {
+  border: 1px solid black;
+}
+
 :root {
   background-color: #f1efee;
   color: #434343;

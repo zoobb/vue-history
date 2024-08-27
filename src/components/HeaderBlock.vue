@@ -1,50 +1,50 @@
 <script setup lang="ts">
-import Toolbar from 'primevue/toolbar';
-import Button from 'primevue/button';
+
 </script>
 
 <template>
-  <toolbar>
-    <template #start>
+  <div class="header">
+    <div class="logo">
       <span>История</span>
-    </template>
-    <template #end>
-      <router-link to="/">
-        <Button
-          label="Главная страница"
-          text
-        />
-      </router-link>
-      <Button
-        label="Введение в изучение истории древнего мира"
-        text
-      />
+    </div>
+    <div class="nav">
       <router-link to="/fifth_class">
-        <Button
-          label="5 Класс"
-          text
-        />
+        <button>5 класс</button>
       </router-link>
-      <Button
-        label="10 Класс"
-        text
-      />
-      <Button
-        label="11 Класс"
-        text
-      />
-      <Button
-        label="12 Класс"
-        text
-      />
-    </template>
-  </toolbar>
+      <button>9 класс</button>
+      <button>10 класс</button>
+      <button>11 класс</button>
+      <button>12 класс</button>
+    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
-/*.header {
+.header {
   height: 4rem;
   width: 100%;
-  background-color: rgb(255, 255, 255, 0.5);
-}*/
+  background-color: #f1efee;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+button {
+  background: none;
+  height: 2rem;
+  width: 4rem;
+}
 </style>
