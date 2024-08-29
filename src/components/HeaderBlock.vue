@@ -4,9 +4,11 @@
 
 <template>
   <div class="header">
-    <div class="logo">
-      <span>История</span>
-    </div>
+    <router-link to="/">
+      <div class="logo">
+        <span>История</span>
+      </div>
+    </router-link>
     <div class="nav">
       <router-link to="/fifth_class">
         <button>5 класс</button>
@@ -27,6 +29,7 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
+  font-size: 2rem;
 }
 
 .logo {
@@ -45,6 +48,7 @@
 button {
   background: none;
   height: 2rem;
-  width: 4rem;
+  width: 10rem;
+  font-size: 1.2rem;
 }
 </style>

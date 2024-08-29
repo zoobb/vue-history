@@ -20,8 +20,6 @@ import BannerBlock from './components/BannerBlock.vue';
   background-color: #f1efee;
   color: #434343;
 
-  font-size: 24px;
-
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
 
