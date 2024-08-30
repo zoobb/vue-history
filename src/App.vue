@@ -13,7 +13,7 @@ import BannerBlock from './components/BannerBlock.vue';
 
 <style lang="scss">
 * {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 :root {
@@ -29,6 +29,12 @@ import BannerBlock from './components/BannerBlock.vue';
 
 body {
   margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  /*all: unset;*/
 }
 
 </style>
