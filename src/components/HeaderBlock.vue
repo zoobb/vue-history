@@ -14,7 +14,9 @@
         <button>5 класс</button>
       </router-link>
       <button>9 класс</button>
-      <button>10 класс</button>
+      <router-link to="/10th_class">
+        <button>10 класс</button>
+      </router-link>
       <button>11 класс</button>
       <button>12 класс</button>
     </div>
