@@ -3,7 +3,6 @@ import { ref } from 'vue';
 
 const props = defineProps<{
   header: string,
-  contentList: string[],
 }>();
 
 const accordion = ref<HTMLElement | null>(null);
@@ -30,23 +29,17 @@ const toggleAccordion = () => { isOpen.value = !isOpen.value; };
       ref="panel"
       class="panel"
     >
-      <ol>
-        <li
-          v-for="(element, index) in props.contentList"
-          :key="index"
-        >
-          {{ element }}
-        </li>
-      </ol>
+      <slot />
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .accordion {
-
+  width: 100%;
 }
 .panel {
+  width: 100%;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
 }
