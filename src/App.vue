@@ -27,6 +27,16 @@ import BannerBlock from './components/BannerBlock.vue';
   text-rendering: optimizeLegibility;
 }
 
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: unset;
+  outline: inherit;
+}
+
 body {
   margin: 0;
 }
