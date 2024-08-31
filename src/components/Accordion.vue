@@ -8,10 +8,12 @@ const props = defineProps<{
 
 const accordion = ref<HTMLElement | null>(null);
 const panel = ref<HTMLElement | null>(null);
-const toggleAccordion = () => {
+const isOpen = ref(false);
+/* const toggleAccordion = () => {
   if (panel.value.style.display === 'none') panel.value.style.display = 'block';
   else panel.value.style.display = 'none';
-};
+}; */
+const toggleAccordion = () => { isOpen.value = !isOpen.value; };
 </script>
 
 <template>
@@ -24,6 +26,7 @@ const toggleAccordion = () => {
       <h1>{{ props.header }}</h1>
     </button>
     <div
+      v-show="isOpen"
       ref="panel"
       class="panel"
     >
@@ -44,7 +47,7 @@ const toggleAccordion = () => {
 
 }
 .panel {
-display: none;
-
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 </style>

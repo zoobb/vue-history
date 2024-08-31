@@ -1,12 +1,12 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   banner: string;
 }>();
 </script>
 
 <template>
   <img
-    :src="$props.banner"
+    :src="props.banner"
     alt="banner"
   >
 </template>
