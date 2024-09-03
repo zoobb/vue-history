@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { gsap } from 'gsap';
 
 const props = defineProps<{
   header: string,
@@ -8,11 +9,19 @@ const props = defineProps<{
 const accordion = ref<HTMLElement | null>(null);
 const panel = ref<HTMLElement | null>(null);
 const isOpen = ref(false);
-/* const toggleAccordion = () => {
-  if (panel.value.style.display === 'none') panel.value.style.display = 'block';
-  else panel.value.style.display = 'none';
-}; */
-const toggleAccordion = () => { isOpen.value = !isOpen.value; };
+const toggleAccordion = () => {
+  isOpen.value = !isOpen.value;
+
+  gsap.to(panel.value, {
+    height: isOpen.value ? 'auto' : 0,
+    duration: 0.5,
+    ease: 'power3.inOut',
+  });
+};
+
+onMounted(() => {
+  gsap.set('.panel', { height: 0 });
+});
 </script>
 
 <template>
@@ -25,7 +34,6 @@ const toggleAccordion = () => { isOpen.value = !isOpen.value; };
       <h1>{{ props.header }}</h1>
     </button>
     <div
-      v-show="isOpen"
       ref="panel"
       class="panel"
     >
@@ -41,6 +49,5 @@ const toggleAccordion = () => { isOpen.value = !isOpen.value; };
 .panel {
   width: 100%;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
 }
 </style>
