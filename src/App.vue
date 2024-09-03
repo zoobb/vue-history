@@ -1,8 +1,6 @@
 <script setup lang="ts">
-
 import HeaderBlock from './components/HeaderBlock.vue';
 import BannerBlock from './components/BannerBlock.vue';
-
 </script>
 
 <template>
@@ -44,7 +42,6 @@ body {
 a {
   color: inherit;
   text-decoration: inherit;
-  /*all: unset;*/
 }
 
 </style>

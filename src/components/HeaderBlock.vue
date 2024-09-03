@@ -10,15 +10,22 @@
       </div>
     </router-link>
     <div class="nav">
+      <!--      todo vfor-->
       <router-link to="/fifth_class">
         <button>5 класс</button>
       </router-link>
-      <button>9 класс</button>
+      <router-link>
+        <button>9 класс</button>
+      </router-link>
       <router-link to="/10th_class">
         <button>10 класс</button>
       </router-link>
-      <button>11 класс</button>
-      <button>12 класс</button>
+      <router-link>
+        <button>11 класс</button>
+      </router-link>
+      <router-link>
+        <button>12 класс</button>
+      </router-link>
     </div>
   </div>
 </template>
